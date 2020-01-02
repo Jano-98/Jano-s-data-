@@ -1,0 +1,25 @@
+#include <stdio.h> 
+#include <string.h>
+
+int main(void)
+{
+ char nombre[25]; //dame 25 espacios//
+ scanf("%s", &nombre);
+ char apellido[12];
+ scanf("%s", &apellido);ls
+ char nombre_apellido[24];
+ for (int i=0; i < strlen(nombre); i++)
+ { 
+ nombre_apellido[i] = nombre[i];
+
+ }
+ nombre_apellido[strlen(nombre)] = ' '; 
+ for (int i=0; i < strlen(apellido); i++)
+ {
+ nombre_apellido[i+strlen(nombre)+1] = apellido[i];
+ }
+ {
+ nombre_apellido[strlen(nombre)+1+strlen(apellido)] = '\0';
+ printf("Hola %s\n", nombre_apellido);
+ }
+}
